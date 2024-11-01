@@ -1,0 +1,44 @@
+
+### DNS (Domain Name System)
+- **Svrha DNS-a**: Povezuje imena domena (kao što je `www.example.com`) s IP adresama koje računari koriste za međusobnu komunikaciju.
+- **Domena**: Naziv web stranice (npr., `google.com`).
+- **IP adresa**: Numerička oznaka računara na mreži (npr., `192.168.1.1`).
+- **Rad DNS-a**:
+  - Kada unesete web adresu u preglednik, računalo šalje DNS upit kako bi dobilo odgovarajuću IP adresu.
+  - DNS server tada "prevodi" ime domene u IP adresu i vraća je računaru.
+  - Nakon dobivanja IP adrese, vaš uređaj može uspostaviti vezu s odgovarajućim serverom.
+- **Vrste DNS zapisa**:
+  - **A zapis**: Povezuje ime domene s IPv4 adresom.
+  - **AAAA zapis**: Povezuje ime domene s IPv6 adresom.
+  - **MX zapis**: Označava mail server za domenu.
+  - **CNAME zapis**: Povezuje domenu s drugim imenom domene (koristi se za preusmjeravanje).
+- **Hijerarhija DNS-a**: DNS sistem je podijeljen u hijerarhiju:
+  - **Root serveri**: Glavna točka za DNS upite, preusmjeravaju na sljedeći sloj.
+  - **TLD (Top-Level Domain) serveri**: Upravljaju glavnim domenama (kao što su `.com`, `.org`, `.hr`).
+  - **Autoritativni DNS serveri**: Imaju konačne informacije o domeni.
+
+### TCP/IP (Transmission Control Protocol / Internet Protocol)
+- **Svrha TCP/IP**: Glavni protokol koji omogućuje prijenos podataka preko interneta, podijeljen na četiri sloja.
+- **Slojevi TCP/IP modela**:
+  1. **Aplikacijski sloj**: Sadrži protokole kao što su HTTP, FTP i SMTP. Omogućuje interakciju s aplikacijama.
+  2. **Transportni sloj**: Upravlja prijenosom podataka između uređaja.
+      - **TCP (Transmission Control Protocol)**:
+        - Osigurava pouzdan prijenos podataka.
+        - Dijeli podatke na pakete, šalje ih i ponovno sastavlja na odredištu.
+        - Postavlja "kontrolne točke" za potvrdu prijenosa.
+      - **UDP (User Datagram Protocol)**:
+        - Nema potvrdu dostave podataka (brži, ali manje pouzdan).
+        - Koristi se za prijenose gdje brzina ima prednost (npr., video streaming).
+  3. **Internetski sloj**: Upravljanje adresiranjem i usmjeravanjem podataka.
+      - **IP (Internet Protocol)**:
+        - Određuje IP adrese pošiljatelja i primatelja.
+        - Usmjerava podatke kroz mrežu koristeći IP pakete.
+        - IPv4 (32-bitne adrese) i IPv6 (128-bitne adrese).
+  4. **Mrežni sloj**: Fizički prijenos podataka kroz mrežne uređaje i medije (npr., Ethernet, Wi-Fi).
+  
+- **Proces prijenosa podataka**:
+  - Podaci se dijele u manje dijelove (pakete) i svaki paket dobiva IP adresu.
+  - Paketi se šalju kroz mrežu i mogu ići različitim putevima.
+  - Na odredištu, TCP sloj ponovno sastavlja pakete u izvorne podatke.
+
+Ovi protokoli zajedno omogućavaju web stranicama, aplikacijama i uređajima da komuniciraju i razmjenjuju podatke na pouzdan način.
